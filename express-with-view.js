@@ -9,7 +9,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
+app.get('/a', (req, res) => {
   const HTML = renderView({
     title: 'My Webtask View',
     body: '<h1>Simple webtask view</h1>'
