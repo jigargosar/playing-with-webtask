@@ -14,9 +14,16 @@ app.get('/', (req, res) => {
     title: 'My Webtask View',
     body: '<h1>Simple webtask view</h1>'
   });
+  
+  fetch("https://google.com")
+  .then(r => r.text())
+  .then((data)=>{
+      res.set('Content-Type', 'text/html');
+      res.status(200).send(HTML);  
+  })
 
-  res.set('Content-Type', 'text/html');
-  res.status(200).send(HTML);
+  // res.set('Content-Type', 'text/html');
+  // res.status(200).send(HTML);
 });
 
 module.exports = fromExpress(app);
