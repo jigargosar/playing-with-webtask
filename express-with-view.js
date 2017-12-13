@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
   .then(r => r.text())
   .then((data)=>{
       res.set('Content-Type', 'text/html');
-      res.status(200).send(HTML);  
+      res.status(200).send(data);  
   })
 
   // res.set('Content-Type', 'text/html');
