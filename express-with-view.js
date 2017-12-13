@@ -3,6 +3,7 @@
 import express from 'express';
 import { fromExpress } from 'webtask-tools';
 import bodyParser from 'body-parser';
+import fetch from "isomorphic-fetch";
 const app = express();
 
 
